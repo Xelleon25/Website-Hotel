@@ -1,0 +1,1319 @@
+<html lang="en" class="scroll-smooth"><head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gold Pearl Resort</title>
+<meta name="description" content="World-class luxury resort experience in Oyugis, Kenya. Unmatched elegance, exceptional service, and unforgettable hospitality since 1985.">
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&amp;family=Inter:wght@300;400;500&amp;display=swap" rel="stylesheet">
+<style>
+:root {
+--font-sans: 'Inter', sans-serif;
+--font-serif: 'Playfair Display', serif;
+}
+body {
+font-family: var(--font-sans);
+-webkit-font-smoothing: antialiased;
+-moz-osx-font-smoothing: grayscale;
+}
+h1, h2, h3, h4, h5, h6, .font-serif {
+font-family: var(--font-serif);
+}
+/* Hide scrollbar for clean horizontal scrolls */
+.no-scrollbar::-webkit-scrollbar { display: none; }
+.no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+/* Custom Date Input Styling */
+input[type="date"]::-webkit-calendar-picker-indicator {
+opacity: 0;
+position: absolute;
+right: 0;
+top: 0;
+width: 100%;
+height: 100%;
+cursor: pointer;
+}
+/* Transitions for reveal */
+.reveal { opacity: 0; transform: translateY(20px); transition: all 0.8s ease-out; }
+.reveal.active { opacity: 1; transform: translateY(0); }
+/* Image loading states */
+.img-loaded { animation: fadeIn 1s ease-in-out; }
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+/* Custom Form Elements */
+.custom-select-wrapper { position: relative; }
+.custom-select-wrapper::after {
+content: '';
+position: absolute;
+right: 1rem;
+top: 50%;
+transform: translateY(-50%);
+width: 0.75rem;
+height: 0.75rem;
+background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2352525b' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+background-size: contain;
+background-repeat: no-repeat;
+pointer-events: none;
+}
+</style><!-- aura-ga4-start -->
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-2M6V79H761"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-2M6V79H761');
+</script>
+<!-- aura-ga4-end -->
+</head>
+  <body class="bg-zinc-50 text-zinc-900 font-light overflow-x-hidden selection:bg-amber-100 selection:text-amber-900">
+    <!-- Progress Bar -->
+    <div id="pgbar" class="fixed top-0 left-0 h-0.5 bg-zinc-900 z-[9999] w-0 transition-all duration-150 ease-linear"></div>
+
+    <!-- Navigation -->
+    <nav id="navbar" class="fixed w-full top-0 z-[1000] transition-all duration-500 py-6 px-6 md:px-12">
+      <div class="max-w-7xl mx-auto flex items-center justify-between">
+        <a href="#" class="flex items-center gap-2 md:gap-3 group">
+          <img src="https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/6d97126b-90d1-4d99-9fc6-38ac3d8f6463_320w.jpg" alt="Gold Pearl Resort Logo" class="h-6 md:h-8 w-auto object-contain">
+          <div class="tracking-tighter font-medium text-lg text-amber-400 transition-colors duration-300" id="nav-logo-text">
+            GOLD PEARL RESORT
+          </div>
+        </a>
+
+        <ul class="hidden lg:flex items-center gap-8">
+          <li>
+            <a href="#about" class="text-xs tracking-widest uppercase text-white/70 hover:text-white transition-colors duration-300 nav-link">
+              About
+            </a>
+          </li>
+          <li>
+            <a href="#rooms" class="text-xs tracking-widest uppercase text-white/70 hover:text-white transition-colors duration-300 nav-link">
+              Rooms
+            </a>
+          </li>
+          <li>
+            <a href="#amenities" class="text-xs tracking-widest uppercase text-white/70 hover:text-white transition-colors duration-300 nav-link">
+              Amenities
+            </a>
+          </li>
+          <li>
+            <a href="#restaurant" class="text-xs tracking-widest uppercase text-white/70 hover:text-white transition-colors duration-300 nav-link">
+              Dining
+            </a>
+          </li>
+          <li>
+            <a href="#offers" class="text-xs tracking-widest uppercase text-white/70 hover:text-white transition-colors duration-300 nav-link">
+              Offers
+            </a>
+          </li>
+        </ul>
+
+        <div class="flex items-center gap-4">
+          <button onclick="document.getElementById('booking').scrollIntoView()" class="hidden md:flex items-center justify-center text-xs tracking-widest uppercase font-medium bg-white text-zinc-900 px-6 py-3 hover:bg-zinc-100 transition-colors duration-300 shadow-sm border border-transparent" id="nav-btn">
+            Book Now
+          </button>
+          <button id="ham-btn" class="lg:hidden text-white p-2" aria-label="Menu">
+            <iconify-icon icon="solar:hamburger-menu-linear" class="text-2xl"></iconify-icon>
+          </button>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div id="mob-menu" class="fixed inset-0 bg-zinc-950 z-[2000] flex flex-col items-center justify-center gap-8 opacity-0 pointer-events-none transition-opacity duration-300 backdrop-blur-md">
+      <button id="close-mob" class="absolute top-8 right-8 text-white p-2">
+        <iconify-icon icon="solar:close-square-linear" class="text-3xl"></iconify-icon>
+      </button>
+      <a href="#about" class="text-2xl font-serif text-white hover:text-amber-500 transition-colors tracking-tight mob-link">
+        About
+      </a>
+      <a href="#rooms" class="text-2xl font-serif text-white hover:text-amber-500 transition-colors tracking-tight mob-link">
+        Rooms &amp; Suites
+      </a>
+      <a href="#amenities" class="text-2xl font-serif text-white hover:text-amber-500 transition-colors tracking-tight mob-link">
+        Amenities
+      </a>
+      <a href="#restaurant" class="text-2xl font-serif text-white hover:text-amber-500 transition-colors tracking-tight mob-link">
+        Dining
+      </a>
+      <a href="#gallery" class="text-2xl font-serif text-white hover:text-amber-500 transition-colors tracking-tight mob-link">
+        Gallery
+      </a>
+      <a href="#contact" class="text-2xl font-serif text-white hover:text-amber-500 transition-colors tracking-tight mob-link">
+        Contact
+      </a>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="relative h-screen min-h-[700px] flex items-center justify-center overflow-hidden bg-zinc-950" id="top">
+      <!-- Slides -->
+      <div class="absolute inset-0 z-0">
+        <div class="hero-slide absolute inset-0 bg-cover bg-center transition-opacity duration-1000 opacity-100" style="background-image: url('https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1920&amp;q=80')"></div>
+        <div class="hero-slide absolute inset-0 bg-cover bg-center transition-opacity duration-1000 opacity-0" style="background-image: url('https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=1920&amp;q=80')"></div>
+        <div class="hero-slide absolute inset-0 bg-cover bg-center transition-opacity duration-1000 opacity-0" style="background-image: url('https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=1920&amp;q=80')"></div>
+        <div class="absolute inset-0 bg-zinc-950/40"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-zinc-950/80 via-transparent to-zinc-950/30"></div>
+      </div>
+
+      <!-- Content -->
+      <div class="relative z-10 text-center px-6 max-w-4xl mx-auto flex flex-col items-center mt-12">
+        <span class="text-xs tracking-widest uppercase text-zinc-300 mb-6 font-medium animate-[fadeIn_1s_ease-out_0.2s_both]">
+          Five-Star Luxury
+        </span>
+        <h1 class="font-serif text-5xl md:text-7xl font-medium text-white tracking-tight leading-tight mb-6 animate-[fadeIn_1s_ease-out_0.5s_both]">
+          Experience Luxury
+          <br>
+          <span class="italic text-amber-300 font-light">
+            Beyond Expectations
+          </span>
+        </h1>
+        <p class="text-sm md:text-base text-zinc-300 max-w-lg mx-auto mb-10 animate-[fadeIn_1s_ease-out_0.8s_both]">
+          Where timeless elegance meets world-class hospitality in Oyugis,
+          Kenya. Every stay, an unforgettable story.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 animate-[fadeIn_1s_ease-out_1.1s_both]">
+          <a href="#rooms" class="inline-flex items-center justify-center text-xs tracking-widest uppercase font-medium bg-white text-zinc-900 px-8 py-4 hover:bg-zinc-100 transition-colors shadow-sm">
+            Explore Suites
+          </a>
+          <a href="#about" class="inline-flex items-center justify-center text-xs tracking-widest uppercase font-medium bg-transparent text-white border border-white/30 px-8 py-4 hover:bg-white/10 transition-colors backdrop-blur-sm">
+            Discover Hotel
+          </a>
+        </div>
+      </div>
+
+      <!-- Slide Indicators -->
+      <div class="absolute bottom-40 z-10 flex gap-3">
+        <button class="slide-dot w-8 h-0.5 bg-white transition-all duration-300" onclick="setSlide(0)"></button>
+        <button class="slide-dot w-4 h-0.5 bg-white/40 transition-all duration-300 hover:bg-white/60" onclick="setSlide(1)"></button>
+        <button class="slide-dot w-4 h-0.5 bg-white/40 transition-all duration-300 hover:bg-white/60" onclick="setSlide(2)"></button>
+      </div>
+
+      <!-- Booking Widget -->
+      <div class="absolute bottom-0 w-full max-w-6xl z-20 px-4 md:px-8 translate-y-1/2" id="booking">
+        <div class="bg-white border border-zinc-200 shadow-xl shadow-zinc-900/5 p-2 grid grid-cols-1 md:grid-cols-5 gap-2">
+          <div class="p-4 border-b md:border-b-0 md:border-r border-zinc-100 flex flex-col justify-center relative">
+            <label class="text-xs tracking-widest uppercase text-zinc-500 mb-1">
+              Check-In
+            </label>
+            <input type="date" id="hero-ci" class="w-full text-sm font-medium text-zinc-900 bg-transparent outline-none cursor-pointer relative z-10 appearance-none" min="2024-01-01">
+          </div>
+          <div class="p-4 border-b md:border-b-0 md:border-r border-zinc-100 flex flex-col justify-center relative">
+            <label class="text-xs tracking-widest uppercase text-zinc-500 mb-1">
+              Check-Out
+            </label>
+            <input type="date" id="hero-co" class="w-full text-sm font-medium text-zinc-900 bg-transparent outline-none cursor-pointer relative z-10 appearance-none" min="2024-01-01">
+          </div>
+          <div class="p-4 border-b md:border-b-0 md:border-r border-zinc-100 flex flex-col justify-center custom-select-wrapper">
+            <label class="text-xs tracking-widest uppercase text-zinc-500 mb-1">
+              Guests
+            </label>
+            <select class="w-full text-sm font-medium text-zinc-900 bg-transparent outline-none cursor-pointer appearance-none">
+              <option>1 Guest</option>
+              <option selected="">2 Guests</option>
+              <option>3 Guests</option>
+              <option>4+ Guests</option>
+            </select>
+          </div>
+          <div class="p-4 border-b md:border-b-0 border-zinc-100 flex flex-col justify-center custom-select-wrapper">
+            <label class="text-xs tracking-widest uppercase text-zinc-500 mb-1">
+              Rooms
+            </label>
+            <select class="w-full text-sm font-medium text-zinc-900 bg-transparent outline-none cursor-pointer appearance-none">
+              <option selected="">1 Room</option>
+              <option>2 Rooms</option>
+              <option>3+ Rooms</option>
+            </select>
+          </div>
+          <button onclick="openModal('modal-book')" class="bg-zinc-900 text-white text-xs tracking-widest uppercase font-medium hover:bg-zinc-800 transition-colors h-full py-4 md:py-0 flex items-center justify-center gap-2">
+            Check Availability
+            <iconify-icon icon="solar:arrow-right-linear" class="text-base"></iconify-icon>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Awards -->
+    <div class="bg-zinc-50 pt-32 pb-12 border-b border-zinc-200">
+      <div class="max-w-7xl mx-auto px-6 md:px-12">
+        <div class="flex flex-wrap justify-center items-center gap-8 md:gap-16 opacity-70 grayscale hover:grayscale-0 transition-all duration-500">
+          <div class="flex items-center gap-2 text-xs tracking-widest uppercase text-zinc-600 font-medium">
+            <iconify-icon icon="solar:star-linear" class="text-base"></iconify-icon>
+            Forbes Five-Star
+          </div>
+          <div class="w-1 h-1 bg-zinc-300 rounded-full hidden md:block"></div>
+          <div class="flex items-center gap-2 text-xs tracking-widest uppercase text-zinc-600 font-medium">
+            <iconify-icon icon="solar:medal-star-linear" class="text-base"></iconify-icon>
+            AAA Five Diamond
+          </div>
+          <div class="w-1 h-1 bg-zinc-300 rounded-full hidden md:block"></div>
+          <div class="flex items-center gap-2 text-xs tracking-widest uppercase text-zinc-600 font-medium">
+            <iconify-icon icon="solar:cup-star-linear" class="text-base"></iconify-icon>
+            #1 Condé Nast
+          </div>
+          <div class="w-1 h-1 bg-zinc-300 rounded-full hidden md:block"></div>
+          <div class="flex items-center gap-2 text-xs tracking-widest uppercase text-zinc-600 font-medium">
+            <iconify-icon icon="solar:map-star-linear" class="text-base"></iconify-icon>
+            Michelin Guide
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- About Section -->
+    <section class="py-24 md:py-32 bg-white" id="about">
+      <div class="max-w-7xl mx-auto px-6 md:px-12 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+        <div class="relative reveal h-[500px] w-full">
+          <img src="https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/45744505-d151-42ca-873c-ad7184799eef_1600w.webp" alt="Resort View" class="absolute top-0 left-0 w-4/5 h-4/5 object-cover shadow-2xl shadow-zinc-900/10">
+          <img src="https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/ab8d245b-e841-49fe-9147-ee68620147df_1600w.webp?w=800&amp;q=80" alt="Interior Details" class="absolute bottom-0 right-0 w-3/5 h-3/5 object-cover border-8 border-white shadow-xl shadow-zinc-900/5">
+          <div class="absolute top-8 right-8 bg-zinc-900 text-white p-6 text-center shadow-lg">
+            <div class="font-serif text-3xl font-medium tracking-tight leading-none">
+              1985
+            </div>
+            <div class="text-xs tracking-widest uppercase mt-2 text-zinc-400">
+              Est.
+            </div>
+          </div>
+        </div>
+        <div class="reveal">
+          <span class="text-xs tracking-widest uppercase text-zinc-500 font-medium block mb-4">
+            Our Story
+          </span>
+          <h2 class="font-serif text-3xl md:text-4xl font-medium text-zinc-900 tracking-tight leading-tight mb-6">
+            A Legacy of Unmatched
+            <span class="text-amber-600">Luxury</span>
+            &amp; Refined
+            <span class="text-amber-600">Elegance</span>
+          </h2>
+          <div class="space-y-4 text-sm text-zinc-600 leading-relaxed mb-10">
+            Since 1985, Gold Pearl Resort has stood as an enduring symbol of
+            refined hospitality. Nestled in the vibrant heart of Oyugis, Kenya,
+            our iconic property has welcomed cultural luminaries and discerning
+            travelers from every corner of the globe.
+          </div>
+
+          <div class="grid grid-cols-3 gap-6 border-y border-zinc-100 py-8 mb-10">
+            <div class="text-center">
+              <div class="font-serif text-3xl text-zinc-900 tracking-tight mb-1">
+                248
+              </div>
+              <div class="text-xs tracking-widest uppercase text-zinc-500">
+                Rooms
+              </div>
+            </div>
+            <div class="text-center border-l border-zinc-100">
+              <div class="font-serif text-3xl text-zinc-900 tracking-tight mb-1">
+                39
+                <span class="text-amber-700 font-light">+</span>
+              </div>
+              <div class="text-xs tracking-widest uppercase text-zinc-500">
+                Years
+              </div>
+            </div>
+            <div class="text-center border-l border-zinc-100">
+              <div class="font-serif text-3xl text-zinc-900 tracking-tight mb-1">
+                98
+                <span class="text-amber-700 font-light">%</span>
+              </div>
+              <div class="text-xs tracking-widest uppercase text-zinc-500">
+                Satisfaction
+              </div>
+            </div>
+          </div>
+          <a href="#rooms" class="inline-flex items-center gap-2 text-xs tracking-widest uppercase font-medium text-zinc-900 border-b border-zinc-900 pb-1 hover:text-amber-700 hover:border-amber-700 transition-colors">
+            Explore The Hotel
+            <iconify-icon icon="solar:arrow-right-linear" class="text-base"></iconify-icon>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Rooms & Suites -->
+    <section class="py-24 md:py-32 bg-zinc-50" id="rooms">
+      <div class="max-w-7xl mx-auto px-6 md:px-12">
+        <div class="text-center max-w-2xl mx-auto mb-16 reveal">
+          <span class="text-xs tracking-widest uppercase text-zinc-500 font-medium block mb-4">
+            Accommodations
+          </span>
+          <h2 class="font-serif text-3xl md:text-4xl font-medium text-amber-600 tracking-tight mb-4">
+            Sanctuaries of Unrivalled Comfort
+          </h2>
+          <p class="text-sm text-zinc-600">
+            Each room is a masterpiece blending heritage with contemporary
+            minimalism.
+          </p>
+        </div>
+
+        <!-- Custom Tabs -->
+        <div class="flex overflow-x-auto no-scrollbar border-b border-zinc-200 mb-12 reveal">
+          <button class="room-tab active px-6 py-4 text-xs tracking-widest uppercase font-medium text-zinc-900 border-b-2 border-zinc-900 hover:text-zinc-900 transition-colors whitespace-nowrap" onclick="switchTab('room', 0)">
+            Deluxe Room
+          </button>
+          <button class="room-tab px-6 py-4 text-xs tracking-widest uppercase font-medium text-zinc-400 border-b-2 border-transparent hover:text-zinc-900 transition-colors whitespace-nowrap" onclick="switchTab('room', 1)">
+            Premier Suite
+          </button>
+          <button class="room-tab px-6 py-4 text-xs tracking-widest uppercase font-medium text-zinc-400 border-b-2 border-transparent hover:text-zinc-900 transition-colors whitespace-nowrap" onclick="switchTab('room', 2)">
+            Presidential
+          </button>
+        </div>
+
+        <!-- Room Panels -->
+        <div class="relative min-h-[1120px] md:min-h-[1020px] lg:min-h-[600px]">
+          <!-- Room 1 -->
+          <div class="room-panel block absolute inset-0 transition-opacity duration-500 opacity-100 z-10" id="room-0">
+            <div class="grid grid-cols-1 lg:grid-cols-5 gap-12 bg-white border border-zinc-200 shadow-sm">
+              <div class="lg:col-span-3 relative h-[400px] lg:h-full overflow-hidden group">
+                <img src="https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=1200&amp;q=80" alt="Deluxe Room" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                <div class="absolute top-6 left-6 bg-white px-3 py-1 text-[10px] tracking-widest uppercase font-medium text-zinc-900 shadow-sm border border-zinc-100">
+                  Most Popular
+                </div>
+              </div>
+              <div class="lg:col-span-2 p-8 lg:p-12 flex flex-col justify-center">
+                <span class="text-[10px] tracking-widest uppercase text-zinc-500 mb-2 block">
+                  45 sqm · King Bed
+                </span>
+                <h3 class="font-serif text-2xl font-medium text-zinc-900 tracking-tight mb-4">
+                  Garden View Deluxe
+                </h3>
+                <p class="text-sm text-zinc-600 mb-8 leading-relaxed">
+                  An elegant retreat overlooking manicured tropical gardens.
+                  Features a plush king bed arrangement, a marble soaking tub,
+                  and a private balcony.
+                </p>
+
+                <ul class="grid grid-cols-1 sm:grid-cols-2 gap-y-3 gap-x-4 mb-10">
+                  <li class="flex items-center gap-3 text-xs text-zinc-700">
+                    <iconify-icon icon="solar:check-circle-linear" class="text-zinc-400 text-base"></iconify-icon>
+                    Private balcony
+                  </li>
+                  <li class="flex items-center gap-3 text-xs text-zinc-700">
+                    <iconify-icon icon="solar:check-circle-linear" class="text-zinc-400 text-base"></iconify-icon>
+                    Marble soaking tub
+                  </li>
+                  <li class="flex items-center gap-3 text-xs text-zinc-700">
+                    <iconify-icon icon="solar:check-circle-linear" class="text-zinc-400 text-base"></iconify-icon>
+                    Nespresso machine
+                  </li>
+                  <li class="flex items-center gap-3 text-xs text-zinc-700">
+                    <iconify-icon icon="solar:check-circle-linear" class="text-zinc-400 text-base"></iconify-icon>
+                    24/7 room service
+                  </li>
+                </ul>
+
+                <div class="mt-auto pt-8 border-t border-zinc-100 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
+                  <div>
+                    <div class="font-serif text-2xl text-zinc-900 tracking-tight">
+                      KSh 62,400
+                      <span class="text-sm font-sans font-light text-zinc-500 tracking-normal">
+                        / night
+                      </span>
+                    </div>
+                  </div>
+                  <button onclick="openModal('modal-book', 'Deluxe Room')" class="w-full sm:w-auto bg-zinc-900 text-white text-xs tracking-widest uppercase font-medium hover:bg-zinc-800 transition-colors px-6 py-3 border border-transparent shadow-sm">
+                    Reserve
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Room 2 -->
+          <div class="room-panel hidden absolute inset-0 transition-opacity duration-500 opacity-0 z-0" id="room-1">
+            <div class="grid grid-cols-1 lg:grid-cols-5 gap-12 bg-white border border-zinc-200 shadow-sm h-full">
+              <div class="lg:col-span-3 relative h-[400px] lg:h-full overflow-hidden group">
+                <img src="https://images.unsplash.com/photo-1578683010236-d716f9a3f461?w=1200&amp;q=80" alt="Premier Suite" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                <div class="absolute top-6 left-6 bg-white px-3 py-1 text-[10px] tracking-widest uppercase font-medium text-zinc-900 shadow-sm border border-zinc-100">
+                  Best Value
+                </div>
+              </div>
+              <div class="lg:col-span-2 p-8 lg:p-12 flex flex-col justify-center h-full">
+                <span class="text-[10px] tracking-widest uppercase text-zinc-500 mb-2 block">
+                  78 sqm · Separate Living
+                </span>
+                <h3 class="font-serif text-2xl font-medium text-zinc-900 tracking-tight mb-4">
+                  City Skyline Premier
+                </h3>
+                <p class="text-sm text-zinc-600 mb-8 leading-relaxed">
+                  Commanding breathtaking panoramic views, featuring a separate
+                  living room, dedicated workspace, and a master bathroom with
+                  dual vanities.
+                </p>
+
+                <ul class="grid grid-cols-1 sm:grid-cols-2 gap-y-3 gap-x-4 mb-10">
+                  <li class="flex items-center gap-3 text-xs text-zinc-700">
+                    <iconify-icon icon="solar:check-circle-linear" class="text-zinc-400 text-base"></iconify-icon>
+                    Skyline views
+                  </li>
+                  <li class="flex items-center gap-3 text-xs text-zinc-700">
+                    <iconify-icon icon="solar:check-circle-linear" class="text-zinc-400 text-base"></iconify-icon>
+                    Separate living room
+                  </li>
+                  <li class="flex items-center gap-3 text-xs text-zinc-700">
+                    <iconify-icon icon="solar:check-circle-linear" class="text-zinc-400 text-base"></iconify-icon>
+                    Club lounge access
+                  </li>
+                  <li class="flex items-center gap-3 text-xs text-zinc-700">
+                    <iconify-icon icon="solar:check-circle-linear" class="text-zinc-400 text-base"></iconify-icon>
+                    Butler on request
+                  </li>
+                </ul>
+
+                <div class="mt-auto pt-8 border-t border-zinc-100 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
+                  <div>
+                    <div class="font-serif text-2xl text-zinc-900 tracking-tight">
+                      KSh 119,600
+                      <span class="text-sm font-sans font-light text-zinc-500 tracking-normal">
+                        / night
+                      </span>
+                    </div>
+                  </div>
+                  <button onclick="openModal('modal-book', 'Premier Suite')" class="w-full sm:w-auto bg-zinc-900 text-white text-xs tracking-widest uppercase font-medium hover:bg-zinc-800 transition-colors px-6 py-3 border border-transparent shadow-sm">
+                    Reserve
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Room 3 -->
+          <div class="room-panel hidden absolute inset-0 transition-opacity duration-500 opacity-0 z-0" id="room-2">
+            <div class="grid grid-cols-1 lg:grid-cols-5 gap-12 bg-white border border-zinc-200 shadow-sm h-full">
+              <div class="lg:col-span-3 relative h-[400px] lg:h-full overflow-hidden group">
+                <img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=1200&amp;q=80" alt="Presidential" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                <div class="absolute top-6 left-6 bg-zinc-900 px-3 py-1 text-[10px] tracking-widest uppercase font-medium text-white shadow-sm border border-zinc-800">
+                  Signature
+                </div>
+              </div>
+              <div class="lg:col-span-2 p-8 lg:p-12 flex flex-col justify-center h-full">
+                <span class="text-[10px] tracking-widest uppercase text-zinc-500 mb-2 block">
+                  320 sqm · Penthouse
+                </span>
+                <h3 class="font-serif text-2xl font-medium text-zinc-900 tracking-tight mb-4">
+                  The Presidential Penthouse
+                </h3>
+                <p class="text-sm text-zinc-600 mb-8 leading-relaxed">
+                  The jewel of the resort. Occupying the entire top floor,
+                  delivering an experience rivaled by few addresses on earth
+                  with a private infinity pool.
+                </p>
+
+                <ul class="grid grid-cols-1 sm:grid-cols-2 gap-y-3 gap-x-4 mb-10">
+                  <li class="flex items-center gap-3 text-xs text-zinc-700">
+                    <iconify-icon icon="solar:check-circle-linear" class="text-zinc-400 text-base"></iconify-icon>
+                    Private rooftop pool
+                  </li>
+                  <li class="flex items-center gap-3 text-xs text-zinc-700">
+                    <iconify-icon icon="solar:check-circle-linear" class="text-zinc-400 text-base"></iconify-icon>
+                    24/7 butler team
+                  </li>
+                  <li class="flex items-center gap-3 text-xs text-zinc-700">
+                    <iconify-icon icon="solar:check-circle-linear" class="text-zinc-400 text-base"></iconify-icon>
+                    Private helipad
+                  </li>
+                  <li class="flex items-center gap-3 text-xs text-zinc-700">
+                    <iconify-icon icon="solar:check-circle-linear" class="text-zinc-400 text-base"></iconify-icon>
+                    Chef on call
+                  </li>
+                </ul>
+
+                <div class="mt-auto pt-8 border-t border-zinc-100 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
+                  <div>
+                    <div class="font-serif text-2xl text-zinc-900 tracking-tight">
+                      KSh 1,105,000
+                      <span class="text-sm font-sans font-light text-zinc-500 tracking-normal">
+                        / night
+                      </span>
+                    </div>
+                  </div>
+                  <button onclick="openModal('modal-book', 'Presidential')" class="w-full sm:w-auto bg-zinc-900 text-white text-xs tracking-widest uppercase font-medium hover:bg-zinc-800 transition-colors px-6 py-3 border border-transparent shadow-sm">
+                    Reserve
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Amenities -->
+    <section class="py-24 md:py-32 bg-white border-b border-zinc-100" id="amenities">
+      <div class="max-w-7xl mx-auto px-6 md:px-12">
+        <div class="mb-16 reveal flex flex-col md:flex-row md:items-end justify-between gap-6 border-b border-zinc-100 pb-8">
+          <div>
+            <span class="text-xs tracking-widest uppercase text-zinc-500 font-medium block mb-3">
+              Facilities
+            </span>
+            <h2 class="font-serif text-3xl md:text-4xl font-medium text-amber-600 tracking-tight">
+              Every Comfort, Every Desire
+            </h2>
+          </div>
+          <p class="text-sm text-zinc-600 max-w-sm">
+            Thoughtfully curated experiences to elevate every moment of your
+            stay with us.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-12 reveal">
+          <!-- Amenity -->
+          <div class="group">
+            <iconify-icon icon="solar:swimming-linear" class="text-3xl text-zinc-400 mb-5 group-hover:text-zinc-900 transition-colors duration-300"></iconify-icon>
+            <h3 class="text-sm font-medium text-zinc-900 mb-2">Rooftop Pool</h3>
+            <p class="text-xs text-zinc-500 leading-relaxed">
+              42nd-floor pool with panoramic views, open 24 hours exclusively
+              for guests.
+            </p>
+          </div>
+          <div class="group">
+            <iconify-icon icon="solar:bath-linear" class="text-3xl text-zinc-400 mb-5 group-hover:text-zinc-900 transition-colors duration-300"></iconify-icon>
+            <h3 class="text-sm font-medium text-zinc-900 mb-2">
+              Spa Sanctuary
+            </h3>
+            <p class="text-xs text-zinc-500 leading-relaxed">
+              3,000 sqm sanctuary with 14 treatment rooms and hydrotherapy
+              pools.
+            </p>
+          </div>
+          <div class="group">
+            <iconify-icon icon="solar:chef-hat-linear" class="text-3xl text-zinc-400 mb-5 group-hover:text-zinc-900 transition-colors duration-300"></iconify-icon>
+            <h3 class="text-sm font-medium text-zinc-900 mb-2">
+              Michelin Dining
+            </h3>
+            <p class="text-xs text-zinc-500 leading-relaxed">
+              Three distinct restaurants celebrating contemporary culinary arts.
+            </p>
+          </div>
+          <div class="group">
+            <iconify-icon icon="solar:dumbbell-linear" class="text-3xl text-zinc-400 mb-5 group-hover:text-zinc-900 transition-colors duration-300"></iconify-icon>
+            <h3 class="text-sm font-medium text-zinc-900 mb-2">
+              Fitness Center
+            </h3>
+            <p class="text-xs text-zinc-500 leading-relaxed">
+              World-class gym with modern equipment and bespoke fitness
+              programs.
+            </p>
+          </div>
+          <div class="group">
+            <iconify-icon icon="solar:routing-linear" class="text-3xl text-zinc-400 mb-5 group-hover:text-zinc-900 transition-colors duration-300"></iconify-icon>
+            <h3 class="text-sm font-medium text-zinc-900 mb-2">
+              Airport Transfers
+            </h3>
+            <p class="text-xs text-zinc-500 leading-relaxed">
+              Complimentary luxury sedan transfers for our suite guests.
+            </p>
+          </div>
+          <div class="group">
+            <iconify-icon icon="solar:bell-bing-linear" class="text-3xl text-zinc-400 mb-5 group-hover:text-zinc-900 transition-colors duration-300"></iconify-icon>
+            <h3 class="text-sm font-medium text-zinc-900 mb-2">
+              24/7 Concierge
+            </h3>
+            <p class="text-xs text-zinc-500 leading-relaxed">
+              Legendary team to curate every detail of your experience.
+            </p>
+          </div>
+          <div class="group">
+            <iconify-icon icon="solar:wifi-router-linear" class="text-3xl text-zinc-400 mb-5 group-hover:text-zinc-900 transition-colors duration-300"></iconify-icon>
+            <h3 class="text-sm font-medium text-zinc-900 mb-2">
+              Premium Wi-Fi
+            </h3>
+            <p class="text-xs text-zinc-500 leading-relaxed">
+              Fiber-optic connectivity throughout the property, complimentary.
+            </p>
+          </div>
+          <div class="group">
+            <iconify-icon icon="solar:monitor-camera-linear" class="text-3xl text-zinc-400 mb-5 group-hover:text-zinc-900 transition-colors duration-300"></iconify-icon>
+            <h3 class="text-sm font-medium text-zinc-900 mb-2">Event Spaces</h3>
+            <p class="text-xs text-zinc-500 leading-relaxed">
+              Versatile venues for up to 800 guests with state-of-the-art tech.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Restaurant Split -->
+    <section class="bg-zinc-950 text-white" id="restaurant">
+      <div class="grid grid-cols-1 lg:grid-cols-2 min-h-[600px]">
+        <div class="h-[400px] lg:h-auto bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=1200&amp;q=80')"></div>
+        <div class="p-12 lg:p-24 flex flex-col justify-center reveal">
+          <span class="text-xs tracking-widest uppercase text-zinc-400 font-medium block mb-4">
+            Gastronomy
+          </span>
+          <h2 class="font-serif text-3xl md:text-4xl font-medium tracking-tight mb-6">
+            A Journey Through Flavour
+          </h2>
+          <p class="text-sm text-zinc-400 mb-10 leading-relaxed max-w-md">
+            Our culinary universe spans three distinct destinations. From
+            Michelin-starred contemporary Asian cuisine to our rooftop champagne
+            bar with unparalleled city views.
+          </p>
+
+          <div class="space-y-4 mb-12">
+            <div class="flex items-start gap-4">
+              <div class="w-1.5 h-1.5 rounded-full bg-white mt-1.5 flex-shrink-0"></div>
+              <p class="text-xs text-zinc-300">
+                <span class="text-white font-medium">Jade</span>
+                — Michelin-starred contemporary Asian
+              </p>
+            </div>
+            <div class="flex items-start gap-4">
+              <div class="w-1.5 h-1.5 rounded-full bg-white mt-1.5 flex-shrink-0"></div>
+              <p class="text-xs text-zinc-300">
+                <span class="text-white font-medium">The Colony</span>
+                — Heritage brasserie
+              </p>
+            </div>
+            <div class="flex items-start gap-4">
+              <div class="w-1.5 h-1.5 rounded-full bg-white mt-1.5 flex-shrink-0"></div>
+              <p class="text-xs text-zinc-300">
+                <span class="text-white font-medium">Altitude</span>
+                — Rooftop champagne bar
+              </p>
+            </div>
+          </div>
+
+          <button onclick="openModal('modal-generic')" class="self-start inline-flex items-center gap-2 text-xs tracking-widest uppercase font-medium bg-white text-zinc-900 px-8 py-4 hover:bg-zinc-200 transition-colors">
+            Reserve a Table
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Gallery Grid -->
+    <section class="py-24 md:py-32 bg-white" id="gallery">
+      <div class="max-w-7xl mx-auto px-6 md:px-12">
+        <div class="flex justify-between items-end mb-12 reveal border-b border-zinc-100 pb-8">
+          <div>
+            <span class="text-xs tracking-widest uppercase text-zinc-500 font-medium block mb-3">
+              Visuals
+            </span>
+            <h2 class="font-serif text-3xl md:text-4xl font-medium text-amber-600 tracking-tight">
+              The Gallery
+            </h2>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-2 md:grid-cols-3 gap-1 md:gap-4 reveal">
+          <div class="col-span-2 row-span-2 h-[300px] md:h-[616px] relative group overflow-hidden cursor-pointer bg-zinc-100" onclick="openLB(0)">
+            <img src="https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/8c48d70c-2ff5-42c5-92c8-e115faba4fb3_1600w.webp?w=800&amp;q=80" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" alt="Gallery">
+            <div class="absolute inset-0 bg-zinc-950/0 group-hover:bg-zinc-950/20 transition-colors duration-300 flex items-center justify-center">
+              <iconify-icon icon="solar:maximize-linear" class="text-white text-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></iconify-icon>
+            </div>
+          </div>
+          <div class="h-[150px] md:h-[300px] relative group overflow-hidden cursor-pointer bg-zinc-100" onclick="openLB(1)">
+            <img src="https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=600&amp;q=80" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" alt="Gallery">
+            <div class="absolute inset-0 bg-zinc-950/0 group-hover:bg-zinc-950/20 transition-colors duration-300 flex items-center justify-center">
+              <iconify-icon icon="solar:maximize-linear" class="text-white text-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></iconify-icon>
+            </div>
+          </div>
+          <div class="h-[150px] md:h-[300px] relative group overflow-hidden cursor-pointer bg-zinc-100" onclick="openLB(2)">
+            <img src="https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/be728f71-311b-496a-9860-5aa24025d28e_800w.jpg" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" alt="Gallery">
+            <div class="absolute inset-0 bg-zinc-950/0 group-hover:bg-zinc-950/20 transition-colors duration-300 flex items-center justify-center">
+              <iconify-icon icon="solar:maximize-linear" class="text-white text-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></iconify-icon>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Offers -->
+    <section class="py-24 md:py-32 bg-zinc-50 border-t border-zinc-200" id="offers">
+      <div class="max-w-7xl mx-auto px-6 md:px-12">
+        <div class="text-center max-w-2xl mx-auto mb-16 reveal">
+          <span class="text-xs tracking-widest uppercase text-zinc-500 font-medium block mb-4">
+            Exclusives
+          </span>
+          <h2 class="font-serif text-3xl md:text-4xl font-medium text-amber-600 tracking-tight mb-4">
+            Curated Experiences
+          </h2>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 reveal">
+          <!-- Offer Card -->
+          <div class="bg-white border border-zinc-200 shadow-sm flex flex-col group">
+            <div class="h-48 overflow-hidden relative">
+              <img src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?w=600&amp;q=80" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" alt="Honeymoon">
+              <div class="absolute top-4 left-4 bg-white border border-zinc-200 px-2 py-1 text-[10px] tracking-widest uppercase font-medium text-zinc-900">
+                Couples
+              </div>
+            </div>
+            <div class="p-8 flex flex-col flex-grow">
+              <h3 class="font-serif text-xl font-medium text-zinc-900 tracking-tight mb-3">
+                Honeymoon Retreat
+              </h3>
+              <p class="text-xs text-zinc-500 leading-relaxed mb-6 flex-grow">
+                3 nights in a Suite, couples' spa journey, and private poolside
+                dining.
+              </p>
+              <div class="flex items-center justify-between border-t border-zinc-100 pt-6">
+                <div>
+                  <div class="text-[10px] text-zinc-400 line-through mb-0.5">
+                    KSh 416,000
+                  </div>
+                  <div class="text-sm font-medium text-zinc-900">
+                    From KSh 364,000
+                  </div>
+                </div>
+                <button onclick="openModal('modal-generic')" class="text-xs tracking-widest uppercase font-medium text-zinc-900 border-b border-zinc-900 pb-0.5 hover:text-amber-700 hover:border-amber-700 transition-colors">
+                  Book
+                </button>
+              </div>
+            </div>
+          </div>
+          <!-- Offer Card -->
+          <div class="bg-white border border-zinc-200 shadow-sm flex flex-col group">
+            <div class="h-48 overflow-hidden relative">
+              <img src="https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/cb12fd7a-6a63-4b91-bbaf-46fb4e6fabd0_800w.webp" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" alt="Family">
+              <div class="absolute top-4 left-4 bg-white border border-zinc-200 px-2 py-1 text-[10px] tracking-widest uppercase font-medium text-zinc-900">
+                Family
+              </div>
+            </div>
+            <div class="p-8 flex flex-col flex-grow">
+              <h3 class="font-serif text-xl font-medium text-zinc-900 tracking-tight mb-3">
+                Family Explorer
+              </h3>
+              <p class="text-xs text-zinc-500 leading-relaxed mb-6 flex-grow">
+                Connecting rooms, daily breakfast, attraction tickets, and kids'
+                club access.
+              </p>
+              <div class="flex items-center justify-between border-t border-zinc-100 pt-6">
+                <div>
+                  <div class="text-[10px] text-zinc-400 line-through mb-0.5">
+                    KSh 234,000
+                  </div>
+                  <div class="text-sm font-medium text-zinc-900">
+                    From KSh 188,500
+                  </div>
+                </div>
+                <button onclick="openModal('modal-generic')" class="text-xs tracking-widest uppercase font-medium text-zinc-900 border-b border-zinc-900 pb-0.5 hover:text-amber-700 hover:border-amber-700 transition-colors">
+                  Book
+                </button>
+              </div>
+            </div>
+          </div>
+          <!-- Offer Card -->
+          <div class="bg-white border border-zinc-200 shadow-sm flex flex-col group">
+            <div class="h-48 overflow-hidden relative">
+              <img src="https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/23680121-8d09-4a7a-bfe5-32131f1d183f_800w.webp" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" alt="Weekend">
+              <div class="absolute top-4 left-4 bg-white border border-zinc-200 px-2 py-1 text-[10px] tracking-widest uppercase font-medium text-zinc-900">
+                Escape
+              </div>
+            </div>
+            <div class="p-8 flex flex-col flex-grow">
+              <h3 class="font-serif text-xl font-medium text-zinc-900 tracking-tight mb-3">
+                Weekend Escape
+              </h3>
+              <p class="text-xs text-zinc-500 leading-relaxed mb-6 flex-grow">
+                Two nights, champagne breakfast in bed, full spa access, and
+                late checkout.
+              </p>
+              <div class="flex items-center justify-between border-t border-zinc-100 pt-6">
+                <div>
+                  <div class="text-[10px] text-zinc-400 line-through mb-0.5">
+                    KSh 143,000
+                  </div>
+                  <div class="text-sm font-medium text-zinc-900">
+                    From KSh 115,700
+                  </div>
+                </div>
+                <button onclick="openModal('modal-generic')" class="text-xs tracking-widest uppercase font-medium text-zinc-900 border-b border-zinc-900 pb-0.5 hover:text-amber-700 hover:border-amber-700 transition-colors">
+                  Book
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Form -->
+    <section class="py-24 md:py-32 bg-white border-t border-zinc-200" id="contact">
+      <div class="max-w-7xl mx-auto px-6 md:px-12 grid grid-cols-1 lg:grid-cols-2 gap-16">
+        <div class="reveal">
+          <span class="text-xs tracking-widest uppercase text-zinc-500 font-medium block mb-4">
+            Contact Us
+          </span>
+          <h2 class="font-serif text-3xl md:text-4xl font-medium text-amber-600 tracking-tight mb-8">
+            We're Here to Serve You
+          </h2>
+
+          <form class="space-y-6" onsubmit="event.preventDefault(); showToast('Message Sent', 'We have received your message and will respond shortly.');" action="" method="">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+              <div>
+                <label class="block text-[10px] tracking-widest uppercase text-zinc-500 mb-2">
+                  First Name
+                </label>
+                <input type="text" required="" class="w-full bg-zinc-50 border border-zinc-200 rounded-none px-4 py-3 text-sm focus:outline-none focus:border-zinc-900 focus:ring-1 focus:ring-zinc-900 transition-colors" name="first_name">
+              </div>
+              <div>
+                <label class="block text-[10px] tracking-widest uppercase text-zinc-500 mb-2">
+                  Last Name
+                </label>
+                <input type="text" required="" class="w-full bg-zinc-50 border border-zinc-200 rounded-none px-4 py-3 text-sm focus:outline-none focus:border-zinc-900 focus:ring-1 focus:ring-zinc-900 transition-colors" name="last_name">
+              </div>
+            </div>
+            <div>
+              <label class="block text-[10px] tracking-widest uppercase text-zinc-500 mb-2">
+                Email Address
+              </label>
+              <input type="email" required="" class="w-full bg-zinc-50 border border-zinc-200 rounded-none px-4 py-3 text-sm focus:outline-none focus:border-zinc-900 focus:ring-1 focus:ring-zinc-900 transition-colors" name="email">
+            </div>
+            <div class="custom-select-wrapper">
+              <label class="block text-[10px] tracking-widest uppercase text-zinc-500 mb-2">
+                Inquiry Type
+              </label>
+              <select class="w-full bg-zinc-50 border border-zinc-200 rounded-none px-4 py-3 text-sm focus:outline-none focus:border-zinc-900 focus:ring-1 focus:ring-zinc-900 transition-colors appearance-none" name="inquiry_type">
+                <option>Room Reservation</option>
+                <option>Dining</option>
+                <option>Events</option>
+                <option>Other</option>
+              </select>
+            </div>
+            <div>
+              <label class="block text-[10px] tracking-widest uppercase text-zinc-500 mb-2">
+                Message
+              </label>
+              <textarea rows="4" required="" class="w-full bg-zinc-50 border border-zinc-200 rounded-none px-4 py-3 text-sm focus:outline-none focus:border-zinc-900 focus:ring-1 focus:ring-zinc-900 transition-colors resize-none" name="message"></textarea>
+            </div>
+            <button type="submit" class="bg-zinc-900 text-white text-xs tracking-widest uppercase font-medium hover:bg-zinc-800 transition-colors px-8 py-4 border border-transparent shadow-sm w-full sm:w-auto">
+              Send Message
+            </button>
+          </form>
+        </div>
+
+        <div class="lg:pl-12 lg:border-l border-zinc-100 flex flex-col justify-center reveal space-y-10">
+          <div class="space-y-6">
+            <div>
+              <h3 class="text-xs tracking-widest uppercase text-zinc-500 font-medium mb-2">
+                Location
+              </h3>
+              <p class="text-lg font-serif text-amber-600 tracking-tight">
+                Gold Pearl Resort, Oyugis Town, Homa Bay County, Kenya
+              </p>
+              <p class="text-sm text-zinc-500 mt-1">
+                Along Kisii-Oyugis Road, Oyugis
+              </p>
+            </div>
+            <div>
+              <h3 class="text-xs tracking-widest uppercase text-zinc-500 font-medium mb-2">
+                Email
+              </h3>
+              <a href="mailto:reservations@goldpearl.com" class="text-lg font-serif text-amber-600 tracking-tight hover:text-amber-700 transition-colors">
+                reservations@goldpearl.com
+              </a>
+            </div>
+          </div>
+          <div class="w-full h-64 border border-zinc-200">
+            <iframe src="https://www.google.com/maps?q=Oyugis,+Homa+Bay+County,+Kenya&amp;output=embed" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-zinc-950 pt-20 pb-8 text-zinc-400 border-t border-zinc-900">
+      <div class="max-w-7xl mx-auto px-6 md:px-12">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16 border-b border-zinc-900 pb-16">
+          <div class="md:col-span-1">
+            An icon of refined luxury in Oyugis, Kenya, where timeless elegance
+            and contemporary design converge.
+          </div>
+          <div>
+            <h5 class="text-[10px] tracking-widest uppercase text-zinc-600 mb-6 font-medium">
+              Experience
+            </h5>
+            <ul class="space-y-3 text-xs">
+              <li>
+                <a href="#rooms" class="hover:text-white transition-colors">
+                  Rooms &amp; Suites
+                </a>
+              </li>
+              <li>
+                <a href="#amenities" class="hover:text-white transition-colors">
+                  Spa &amp; Wellness
+                </a>
+              </li>
+              <li>
+                <a href="#restaurant" class="hover:text-white transition-colors">
+                  Dining
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h5 class="text-[10px] tracking-widest uppercase text-zinc-600 mb-6 font-medium">
+              Events
+            </h5>
+            <ul class="space-y-3 text-xs">
+              <li>
+                <a href="#" class="hover:text-white transition-colors">
+                  Weddings
+                </a>
+              </li>
+              <li>
+                <a href="#" class="hover:text-white transition-colors">
+                  Corporate
+                </a>
+              </li>
+              <li>
+                <a href="#" class="hover:text-white transition-colors">
+                  Private Dining
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h5 class="text-[10px] tracking-widest uppercase text-zinc-600 mb-6 font-medium">
+              Newsletter
+            </h5>
+            <form class="flex border border-zinc-800" onsubmit="event.preventDefault(); showToast('Subscribed', 'Thank you for subscribing.');">
+              <input type="email" placeholder="Email address" required="" class="bg-transparent text-xs px-4 py-3 w-full focus:outline-none text-white placeholder-zinc-600">
+              <button type="submit" class="px-4 text-white hover:text-amber-500 transition-colors border-l border-zinc-800">
+                <iconify-icon icon="solar:arrow-right-linear" class="text-sm"></iconify-icon>
+              </button>
+            </form>
+          </div>
+        </div>
+        <div class="flex flex-col md:flex-row justify-between items-center gap-4 text-[10px] text-zinc-600">
+          © 2024 Gold Pearl Resort. All rights reserved.
+        </div>
+      </div>
+    </footer>
+
+    <!-- Toast Notification -->
+    <div id="toast" class="fixed bottom-6 right-6 bg-zinc-950 text-white px-6 py-4 shadow-xl z-[6000] transform translate-y-10 opacity-0 pointer-events-none transition-all duration-300 flex items-center gap-3 border border-zinc-800">
+      <iconify-icon icon="solar:check-circle-linear" class="text-amber-500 text-lg"></iconify-icon>
+      <div>
+        <div id="toast-title" class="text-xs font-medium tracking-wide"></div>
+        <div id="toast-body" class="text-[10px] text-zinc-400 mt-0.5"></div>
+      </div>
+    </div>
+
+    <!-- Lightbox -->
+    <div id="lightbox" class="fixed inset-0 bg-zinc-950/95 z-[5000] hidden items-center justify-center backdrop-blur-sm">
+      <button onclick="closeLB()" class="absolute top-6 right-6 text-white hover:text-zinc-400 transition-colors">
+        <iconify-icon icon="solar:close-square-linear" class="text-3xl"></iconify-icon>
+      </button>
+      <img id="lb-img" src="" alt="Gallery Full" class="max-w-[90vw] max-h-[85vh] object-contain">
+    </div>
+
+    <!-- Booking Modal -->
+    <div id="modal-book" class="fixed inset-0 z-[4000] hidden items-center justify-center p-4">
+      <div class="absolute inset-0 bg-zinc-950/40 backdrop-blur-sm modal-bg cursor-pointer" onclick="closeModal('modal-book')"></div>
+      <div class="relative bg-white w-full max-w-lg shadow-2xl animate-[fadeIn_0.2s_ease-out] border border-zinc-200">
+        <div class="flex justify-between items-center p-6 border-b border-zinc-100 bg-zinc-50">
+          <div>
+            <h3 class="font-serif text-xl font-medium text-zinc-900 tracking-tight">
+              Reservation
+            </h3>
+            <p class="text-[10px] tracking-widest uppercase text-zinc-500 mt-1" id="bk-modal-subtitle">
+              Gold Pearl Resort
+            </p>
+          </div>
+          <button onclick="closeModal('modal-book')" class="text-zinc-400 hover:text-zinc-900 transition-colors">
+            <iconify-icon icon="solar:close-circle-linear" class="text-2xl"></iconify-icon>
+          </button>
+        </div>
+        <form class="p-6 space-y-5" onsubmit="event.preventDefault(); submitBooking();" action="" method="">
+          <div class="grid grid-cols-2 gap-5">
+            <div>
+              <label class="block text-[10px] tracking-widest uppercase text-zinc-500 mb-2">
+                Check-In
+              </label>
+              <input type="date" required="" id="modal-ci" class="w-full bg-white border border-zinc-200 rounded-none px-3 py-2.5 text-sm focus:outline-none focus:border-zinc-900 focus:ring-1 focus:ring-zinc-900 transition-colors appearance-none" min="2024-01-01" name="check_in">
+            </div>
+            <div>
+              <label class="block text-[10px] tracking-widest uppercase text-zinc-500 mb-2">
+                Check-Out
+              </label>
+              <input type="date" required="" id="modal-co" class="w-full bg-white border border-zinc-200 rounded-none px-3 py-2.5 text-sm focus:outline-none focus:border-zinc-900 focus:ring-1 focus:ring-zinc-900 transition-colors appearance-none" min="2024-01-01" name="check_out">
+            </div>
+          </div>
+          <div class="custom-select-wrapper">
+            <label class="block text-[10px] tracking-widest uppercase text-zinc-500 mb-2">
+              Room Type
+            </label>
+            <select id="modal-room-sel" class="w-full bg-white border border-zinc-200 rounded-none px-3 py-2.5 text-sm focus:outline-none focus:border-zinc-900 focus:ring-1 focus:ring-zinc-900 transition-colors appearance-none" name="room_type">
+              <option value="Deluxe Room">
+                Deluxe Room — KSh 62,400/night
+              </option>
+              <option value="Premier Suite">
+                Premier Suite — KSh 119,600/night
+              </option>
+              <option value="Presidential">
+                Presidential Penthouse — KSh 1,105,000/night
+              </option>
+            </select>
+          </div>
+          <div>
+            <label class="block text-[10px] tracking-widest uppercase text-zinc-500 mb-2">
+              Full Name
+            </label>
+            <input type="text" required="" class="w-full bg-white border border-zinc-200 rounded-none px-3 py-2.5 text-sm focus:outline-none focus:border-zinc-900 focus:ring-1 focus:ring-zinc-900 transition-colors" name="full_name">
+          </div>
+          <div>
+            <label class="block text-[10px] tracking-widest uppercase text-zinc-500 mb-2">
+              Email
+            </label>
+            <input type="email" required="" class="w-full bg-white border border-zinc-200 rounded-none px-3 py-2.5 text-sm focus:outline-none focus:border-zinc-900 focus:ring-1 focus:ring-zinc-900 transition-colors" name="email">
+          </div>
+          <button type="submit" class="w-full bg-zinc-900 text-white text-xs tracking-widest uppercase font-medium hover:bg-zinc-800 transition-colors px-6 py-4 shadow-sm mt-2">
+            Confirm Request
+          </button>
+          <p class="text-center text-[10px] text-zinc-400">
+            No payment required at this step.
+          </p>
+        </form>
+      </div>
+    </div>
+
+    <!-- Generic Modal for Dining/Packages -->
+    <div id="modal-generic" class="fixed inset-0 z-[4000] hidden items-center justify-center p-4">
+      <div class="absolute inset-0 bg-zinc-950/40 backdrop-blur-sm cursor-pointer" onclick="closeModal('modal-generic')"></div>
+      <div class="relative bg-white w-full max-w-sm shadow-2xl animate-[fadeIn_0.2s_ease-out] border border-zinc-200 p-8 text-center">
+        <iconify-icon icon="solar:check-circle-linear" class="text-4xl text-zinc-900 mb-4"></iconify-icon>
+        <h3 class="font-serif text-2xl font-medium text-zinc-900 tracking-tight mb-2">
+          Request Received
+        </h3>
+        <p class="text-sm text-zinc-500 mb-8 leading-relaxed">
+          Thank you. Our concierge team will contact you shortly to confirm the
+          details.
+        </p>
+        <button onclick="closeModal('modal-generic')" class="w-full border border-zinc-200 text-zinc-900 text-xs tracking-widest uppercase font-medium hover:bg-zinc-50 transition-colors px-6 py-3">
+          Close
+        </button>
+      </div>
+    </div>
+
+    <!-- Floating Action Buttons -->
+    <button id="chat-fab" class="fixed bottom-6 left-6 w-12 h-12 bg-white border border-zinc-200 shadow-md text-zinc-900 flex items-center justify-center hover:bg-zinc-50 transition-all z-[3000]" onclick="toggleChat()">
+      <iconify-icon icon="solar:chat-round-line-linear" class="text-xl"></iconify-icon>
+    </button>
+
+    <div id="chat-panel" class="fixed bottom-24 left-6 w-72 bg-white border border-zinc-200 shadow-xl z-[3000] hidden flex-col opacity-0 transition-opacity duration-300">
+      <div class="bg-zinc-900 text-white p-4 flex justify-between items-center">
+        <span class="text-xs tracking-widest uppercase font-medium">
+          Concierge
+        </span>
+        <button onclick="toggleChat()" class="text-white hover:text-zinc-300">
+          <iconify-icon icon="solar:close-square-linear"></iconify-icon>
+        </button>
+      </div>
+      <div class="p-4 h-48 overflow-y-auto bg-zinc-50 text-sm flex flex-col gap-3" id="chat-msgs">
+        <div class="bg-white border border-zinc-200 p-3 self-start max-w-[85%] rounded-r-md rounded-bl-md text-zinc-700 shadow-sm">
+          Hi! Welcome. How may I assist you with your stay?
+        </div>
+      </div>
+      <div class="p-3 bg-white border-t border-zinc-200">
+        <form class="flex" onsubmit="event.preventDefault(); sendChat();">
+          <input type="text" id="chat-inp" placeholder="Type a message..." class="w-full text-xs outline-none px-2 text-zinc-900 bg-transparent">
+          <button type="submit" class="text-zinc-400 hover:text-zinc-900">
+            <iconify-icon icon="solar:plain-linear" class="text-lg"></iconify-icon>
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <script>
+      // Utilities
+      const d = document;
+      const fmt = date => date.toISOString().split('T')[0];
+      const today = new Date();
+      const tomorrow = new Date(today); tomorrow.setDate(tomorrow.getDate() + 1);
+
+      // Initialize Dates
+      ['hero-ci', 'hero-co', 'modal-ci', 'modal-co'].forEach(id => {
+          const el = d.getElementById(id);
+          if(el) {
+              el.min = fmt(today);
+              el.value = id.includes('ci') ? fmt(today) : fmt(tomorrow);
+          }
+      });
+
+      // Scroll Progress & Navbar
+      window.addEventListener('scroll', () => {
+          const scrolled = window.scrollY;
+          const max = d.body.scrollHeight - window.innerHeight;
+          d.getElementById('pgbar').style.width = `${(scrolled / max) * 100}%`;
+
+          const nav = d.getElementById('navbar');
+          const logoText = d.getElementById('nav-logo-text');
+          const links = d.querySelectorAll('.nav-link');
+          const btn = d.getElementById('nav-btn');
+          const ham = d.getElementById('ham-btn');
+
+          if (scrolled > 50) {
+              nav.classList.add('bg-white/90', 'backdrop-blur-md', 'border-zinc-200', 'shadow-sm');
+              nav.classList.remove('py-6'); nav.classList.add('py-4');
+              logoText.classList.remove('text-white'); logoText.classList.add('text-zinc-900');
+              ham.classList.remove('text-white'); ham.classList.add('text-zinc-900');
+              links.forEach(l => { l.classList.remove('text-white/70'); l.classList.add('text-zinc-500'); l.classList.replace('hover:text-white', 'hover:text-zinc-900'); });
+              btn.classList.remove('bg-white', 'text-zinc-900'); btn.classList.add('bg-zinc-900', 'text-white');
+          } else {
+              nav.classList.remove('bg-white/90', 'backdrop-blur-md', 'border-zinc-200', 'shadow-sm');
+              nav.classList.add('py-6'); nav.classList.remove('py-4');
+              logoText.classList.add('text-white'); logoText.classList.remove('text-zinc-900');
+              ham.classList.add('text-white'); ham.classList.remove('text-zinc-900');
+              links.forEach(l => { l.classList.add('text-white/70'); l.classList.remove('text-zinc-500'); l.classList.replace('hover:text-zinc-900', 'hover:text-white'); });
+              btn.classList.add('bg-white', 'text-zinc-900'); btn.classList.remove('bg-zinc-900', 'text-white');
+          }
+      });
+
+      // Mobile Menu
+      d.getElementById('ham-btn').addEventListener('click', () => {
+          const m = d.getElementById('mob-menu');
+          m.classList.remove('opacity-0', 'pointer-events-none');
+          d.body.style.overflow = 'hidden';
+      });
+      const closeMob = () => {
+          d.getElementById('mob-menu').classList.add('opacity-0', 'pointer-events-none');
+          d.body.style.overflow = '';
+      };
+      d.getElementById('close-mob').addEventListener('click', closeMob);
+      d.querySelectorAll('.mob-link').forEach(l => l.addEventListener('click', closeMob));
+
+      // Hero Slider
+      let curSlide = 0;
+      const slides = d.querySelectorAll('.hero-slide');
+      const dots = d.querySelectorAll('.slide-dot');
+      function setSlide(n) {
+          slides[curSlide].classList.replace('opacity-100', 'opacity-0');
+          dots[curSlide].classList.replace('w-8', 'w-4');
+          dots[curSlide].classList.replace('bg-white', 'bg-white/40');
+
+          curSlide = n;
+
+          slides[curSlide].classList.replace('opacity-0', 'opacity-100');
+          dots[curSlide].classList.replace('w-4', 'w-8');
+          dots[curSlide].classList.replace('bg-white/40', 'bg-white');
+      }
+      setInterval(() => setSlide((curSlide + 1) % slides.length), 5000);
+
+      // Reveal on Scroll
+      const observer = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+              if (entry.isIntersecting) {
+                  entry.target.classList.add('active');
+              }
+          });
+      }, { threshold: 0.1 });
+      d.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+      // Room Tabs
+      function switchTab(prefix, index) {
+          d.querySelectorAll('.room-tab').forEach((t, i) => {
+              if(i === index) {
+                  t.classList.add('text-zinc-900', 'border-zinc-900');
+                  t.classList.remove('text-zinc-400', 'border-transparent');
+              } else {
+                  t.classList.remove('text-zinc-900', 'border-zinc-900');
+                  t.classList.add('text-zinc-400', 'border-transparent');
+              }
+          });
+          d.querySelectorAll('.room-panel').forEach((p, i) => {
+              if(i === index) {
+                  p.classList.remove('hidden');
+                  setTimeout(() => p.classList.replace('opacity-0', 'opacity-100'), 50);
+                  p.classList.add('z-10'); p.classList.remove('z-0');
+              } else {
+                  p.classList.replace('opacity-100', 'opacity-0');
+                  p.classList.remove('z-10'); p.classList.add('z-0');
+                  setTimeout(() => { if(!p.classList.contains('opacity-100')) p.classList.add('hidden') }, 500);
+              }
+          });
+      }
+
+      // Modals
+      function openModal(id, room = null) {
+          const m = d.getElementById(id);
+          m.classList.remove('hidden');
+          m.classList.add('flex');
+          d.body.style.overflow = 'hidden';
+
+          if(id === 'modal-book' && room) {
+              const sel = d.getElementById('modal-room-sel');
+              for(let i=0; i<sel.options.length; i++) {
+                  if(sel.options[i].value === room) sel.selectedIndex = i;
+              }
+          }
+      }
+      function closeModal(id) {
+          const m = d.getElementById(id);
+          m.classList.add('hidden');
+          m.classList.remove('flex');
+          d.body.style.overflow = '';
+      }
+
+      function submitBooking() {
+          closeModal('modal-book');
+          showToast('Request Sent', 'We will confirm your reservation shortly.');
+      }
+
+      // Toast
+      let toastTimeout;
+      function showToast(title, body) {
+          const t = d.getElementById('toast');
+          d.getElementById('toast-title').textContent = title;
+          d.getElementById('toast-body').textContent = body;
+
+          t.classList.remove('translate-y-10', 'opacity-0', 'pointer-events-none');
+          clearTimeout(toastTimeout);
+          toastTimeout = setTimeout(() => {
+              t.classList.add('translate-y-10', 'opacity-0', 'pointer-events-none');
+          }, 4000);
+      }
+
+      // Lightbox
+      const lbImgs = [
+          'https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1600&q=90',
+          'https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=1200&q=90',
+          'https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=1200&q=90'
+      ];
+      function openLB(idx) {
+          d.getElementById('lb-img').src = lbImgs[idx];
+          d.getElementById('lightbox').classList.remove('hidden');
+          d.getElementById('lightbox').classList.add('flex');
+          d.body.style.overflow = 'hidden';
+      }
+      function closeLB() {
+          d.getElementById('lightbox').classList.add('hidden');
+          d.getElementById('lightbox').classList.remove('flex');
+          d.body.style.overflow = '';
+      }
+
+      // Chat
+      let chatOpen = false;
+      function toggleChat() {
+          const p = d.getElementById('chat-panel');
+          const icon = d.querySelector('#chat-fab iconify-icon');
+          chatOpen = !chatOpen;
+          if(chatOpen) {
+              p.classList.remove('hidden');
+              setTimeout(() => p.classList.replace('opacity-0', 'opacity-100'), 10);
+              icon.setAttribute('icon', 'solar:close-square-linear');
+          } else {
+              p.classList.replace('opacity-100', 'opacity-0');
+              setTimeout(() => p.classList.add('hidden'), 300);
+              icon.setAttribute('icon', 'solar:chat-round-line-linear');
+          }
+      }
+      function sendChat() {
+          const inp = d.getElementById('chat-inp');
+          const val = inp.value.trim();
+          if(!val) return;
+
+          const msgs = d.getElementById('chat-msgs');
+          msgs.innerHTML += `<div class="bg-zinc-900 text-white p-3 self-end max-w-[85%] rounded-l-md rounded-tr-md shadow-sm ml-auto">${val}</div>`;
+          inp.value = '';
+          msgs.scrollTop = msgs.scrollHeight;
+
+          setTimeout(() => {
+              msgs.innerHTML += `<div class="bg-white border border-zinc-200 p-3 self-start max-w-[85%] rounded-r-md rounded-bl-md text-zinc-700 shadow-sm">Thank you. A team member will respond momentarily.</div>`;
+              msgs.scrollTop = msgs.scrollHeight;
+          }, 1000);
+      }
+    </script>
+
+    <script>
+      (function(){const galleryImages=["https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/8c48d70c-2ff5-42c5-92c8-e115faba4fb3_1600w.webp?w=1600&q=90","https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=1200&q=90","https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/be728f71-311b-496a-9860-5aa24025d28e_800w.jpg"];window.openLB=function(idx){const src=galleryImages[idx];if(!src)return;document.getElementById("lb-img").src=src;document.getElementById("lightbox").classList.remove("hidden");document.getElementById("lightbox").classList.add("flex");document.body.style.overflow="hidden";};window.sendChat=function(){const inp=document.getElementById("chat-inp");const val=inp.value.trim();if(!val)return;const msgs=document.getElementById("chat-msgs");const user=document.createElement("div");user.className="bg-zinc-900 text-white p-3 self-end max-w-[85%] rounded-l-md rounded-tr-md shadow-sm ml-auto";user.textContent=val;msgs.appendChild(user);inp.value="";msgs.scrollTop=msgs.scrollHeight;setTimeout(function(){const reply=document.createElement("div");reply.className="bg-white border border-zinc-200 p-3 self-start max-w-[85%] rounded-r-md rounded-bl-md text-zinc-700 shadow-sm";reply.textContent="Thank you. A team member will respond momentarily.";msgs.appendChild(reply);msgs.scrollTop=msgs.scrollHeight;},1000);};})();
+    </script>
+  
+</body></html>
